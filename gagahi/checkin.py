@@ -1,9 +1,8 @@
-from selenium import webdriver
 from time import sleep
-from selenium.webdriver.common.by import By
-import os
-from dataLoad import dataLoading
+
 from find_element import Element
+
+from gagahi.dataLoad import dataLoading
 
 actions = Element()
 actions.id("dl").click()
