@@ -1,19 +1,20 @@
 from time import sleep
-from find_element import Element
+from gagahi.find_element import Element
 from gagahi.dataLoad import dataLoading
 
+# 类实例化
 actions = Element()
 actions.id("dl").click()
 sleep(3)
 actions.class_name("inp.txt-name").clear()
 # 类中方法调用
-a = dataLoading.login_data("pc数据.xlsx")
+a = dataLoading.login_data("./gagahi/pc数据.xlsx")
 
-actions.class_name( "inp.txt-name").send_keys(a['账号'])
+actions.class_name("inp.txt-name").send_keys(a[0]['账号'])
 actions.class_name("inp.txt-pwd").clear()
-actions.class_name("inp.txt-pwd").send_keys(a['密码'])
+actions.class_name("inp.txt-pwd").send_keys(a[0]['密码'])
 actions.id("log-bnt").click()
-sleep(3)
+sleep(5)
 actions.id("leftSixinIndexText").click()
 sleep(3)
 actions.xpth('//*[@id="mCSB_2_container"]/div[3]/ul/li[1]').click()
@@ -26,5 +27,10 @@ actions.class_name("webuploader-element-invisible").send_keys(file_path)
 sleep(3)
 actions.class_name('sendBtn').click()
 sleep(5)
-
+b = dataLoading.message_data("./gagahi/pc数据.xlsx")
+for i in b:
+    actions.id('inputBox').send_keys(i)
+    actions.class_name('sendBtn').click()
+    sleep(2)
+sleep(5)
 actions.qu()
