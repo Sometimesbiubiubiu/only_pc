@@ -1,7 +1,5 @@
 from time import sleep
-
 from find_element import Element
-
 from gagahi.dataLoad import dataLoading
 
 actions = Element()
