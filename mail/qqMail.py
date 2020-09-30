@@ -11,7 +11,7 @@ class Mail:
         self.mail_host = "smtp.qq.com"  # 设置服务器:这个是qq邮箱服务器，直接复制就可以
         self.mail_pass = "faauvwaydijkbbje"  # 刚才我们获取的授权码
         self.sender = '542953597@qq.com'  # 你的邮箱地址
-        self.receivers = ['zhangjinyu@zoneyet.com']  # 收件人的邮箱地址，可设置为你的QQ邮箱或者其他邮箱，可多个
+        self.receivers = ['zhangjinyu@zoneyet.com','1299886131@qq.com']  # 收件人的邮箱地址，可设置为你的QQ邮箱或者其他邮箱，可多个
 
     def send(self):
 
